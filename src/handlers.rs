@@ -3,6 +3,11 @@ use std::io::{self, BufRead, Write};
 mod commands;
 
 pub fn handle_commands(handle: &mut dyn BufRead) {
+
+    let simple_pass_length: usize = 9;
+    let pass_length: usize = 12;
+
+
     print!("</> enter command: ");
     io::stdout().flush().unwrap();
 
@@ -11,8 +16,11 @@ pub fn handle_commands(handle: &mut dyn BufRead) {
     let input = input.trim();
 
     match input {
-        "shell" => {
-            commands::shell::activate();
+        "gen_pass" | "gp" => {
+            commands::pass_gen::activate(pass_length);
+        }
+        "gen_simple" | "gs" => {
+            commands::simple_pass_gen::activate(simple_pass_length);
         }
         "exit" | "q" => {
             commands::exit::activate();
