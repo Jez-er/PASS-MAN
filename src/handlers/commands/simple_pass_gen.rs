@@ -15,5 +15,5 @@ pub fn activate(length: usize)  {
  	// Копируем пароль в буфер обмена
 	let mut clipboard: ClipboardContext = ClipboardContext::new().unwrap();
  	clipboard.set_contents(pass.clone()).unwrap();
- 	println!("Password copied to clipboard! ✔️");
+ 	println!("PASS-MAN | Password copied to clipboard! ✔️");
 }

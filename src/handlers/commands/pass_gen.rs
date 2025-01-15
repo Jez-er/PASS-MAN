@@ -27,10 +27,10 @@ pub fn activate(length: usize) {
     let final_password: String = password_chars.into_iter().collect();
 
     // Выводим пароль в консоль
-    println!("Generated password: {}", final_password);
+    println!("PASS-MAN | Generated password: {}", final_password);
 
     // Копируем пароль в буфер обмена
     let mut clipboard: ClipboardContext = ClipboardContext::new().unwrap();
     clipboard.set_contents(final_password.clone()).unwrap();
-    println!("Password copied to clipboard! ✔️");
+    println!("PASS-MAN | Password copied to clipboard! ✔️");
 }
