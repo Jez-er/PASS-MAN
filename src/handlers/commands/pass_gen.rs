@@ -1,6 +1,8 @@
 use rand::seq::{IteratorRandom, SliceRandom};
 use rand::thread_rng;
 use rand::distributions::{Alphanumeric, Distribution};
+use clipboard::ClipboardContext;
+use clipboard::ClipboardProvider;
 
 pub fn activate(length: usize) {
     let special_chars = "!@#$%^&*()-_=+[]{};:,.<>?";
@@ -24,5 +26,11 @@ pub fn activate(length: usize) {
     password_chars.shuffle(&mut rng);
     let final_password: String = password_chars.into_iter().collect();
 
-    println!("PASS-MAN | Generated password: {}", final_password);
+    // Выводим пароль в консоль
+    println!("Generated password: {}", final_password);
+
+    // Копируем пароль в буфер обмена
+    let mut clipboard: ClipboardContext = ClipboardContext::new().unwrap();
+    clipboard.set_contents(final_password.clone()).unwrap();
+    println!("Password copied to clipboard! ✔️");
 }
