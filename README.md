@@ -92,12 +92,12 @@ Here are the tasks and their statuses.
 | Generate simple passwords.                    | ✅ Done        |
 | Generating passwords with special characters. | ✅ Done        |
 | Connect a local database.                     | ✅ Done        |
-| Authorization.                                | ❌ In Progress |
-| Saving password.                              | ❌ Not Started |
+| Authorization.                                | ✅ Done        |
+| Saving password.                              | ❌ In progress |
 | Password encryption.                          | ❌ Not Started |
 | Adding parameters to commands                 | ❌ Not Started |
-| Getting a password.                           | ❌ Not Started |
-| Getting list of the all passwords.            | ❌ Not Started |
+| Getting a password.                           | ❌ In progress |
+| Getting list of the all passwords.            | ❌ In progress |
 | Edit password.                                | ❌ Not Started |
 | Delete password.                              | ❌ Not Started |
 | Create help command.                          | ❌ Not Started |
