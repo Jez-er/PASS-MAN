@@ -91,7 +91,7 @@ Here are the tasks and their statuses.
 | --------------------------------------------- | -------------- |
 | Generate simple passwords.                    | ✅ Done        |
 | Generating passwords with special characters. | ✅ Done        |
-| Connect a local database.                     | ❌ Not Started |
+| Connect a local database.                     | ✅ Done        |
 | Authorization.                                | ❌ In Progress |
 | Saving password.                              | ❌ Not Started |
 | Password encryption.                          | ❌ Not Started |

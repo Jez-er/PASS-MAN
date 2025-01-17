@@ -1,8 +1,10 @@
 use std::io::{self, BufRead, Write};
 
 mod handlers;
+mod db;
 
-fn main() {
+    db::main::start(); // Инициализация базы данных
+
     let stdin = io::stdin();
     let mut handle = stdin.lock();
     let mut is_auth = false;
