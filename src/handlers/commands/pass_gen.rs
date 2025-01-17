@@ -12,24 +12,23 @@ pub fn activate(length: usize) {
     // Генерация символов: буквы и цифры
     let charset: Vec<char> = Alphanumeric
         .sample_iter(&mut rng)
-        .take(length - 1)  // Оставляем место для спецсимвола
+        .take(length - 1)  // Leave space for a special character
         .map(char::from)
         .collect();
 
-    // Добавляем хотя бы один спецсимвол
+    // Add at least one special character
     let mut password: String = charset.into_iter().collect();
-    let special_char: char = special_chars.chars().choose(&mut rng).unwrap();  // Выбираем случайный спецсимвол
+    let special_char: char = special_chars.chars().choose(&mut rng).unwrap();  // Select a random special character
     password.push(special_char);
 
-    // Перемешиваем символы
+    // Mix the symbols
     let mut password_chars: Vec<char> = password.chars().collect();
     password_chars.shuffle(&mut rng);
     let final_password: String = password_chars.into_iter().collect();
 
-    // Выводим пароль в консоль
     println!("PASS-MAN | Generated password: {}", final_password);
 
-    // Копируем пароль в буфер обмена
+    // Copy the password to the clipboard
     let mut clipboard: ClipboardContext = ClipboardContext::new().unwrap();
     clipboard.set_contents(final_password.clone()).unwrap();
     println!("PASS-MAN | Password copied to clipboard! ✔️");

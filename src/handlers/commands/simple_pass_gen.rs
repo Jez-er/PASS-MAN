@@ -12,7 +12,7 @@ pub fn activate(length: usize)  {
 		.collect::<String>();
 
 	println!("PASS-MAN | Generated password: {}", pass);
- 	// Копируем пароль в буфер обмена
+ 	// Copy the password to the clipboard
 	let mut clipboard: ClipboardContext = ClipboardContext::new().unwrap();
  	clipboard.set_contents(pass.clone()).unwrap();
  	println!("PASS-MAN | Password copied to clipboard! ✔️");
