@@ -93,10 +93,10 @@ Here are the tasks and their statuses.
 | Generating passwords with special characters. | ✅ Done        |
 | Connect a local database.                     | ✅ Done        |
 | Authorization.                                | ✅ Done        |
-| Saving password.                              | ❌ In progress |
+| Saving password.                              | ✅ Done        |
 | Password encryption.                          | ❌ Not Started |
-| Adding parameters to commands                 | ❌ Not Started |
-| Getting a password.                           | ❌ In progress |
+| Adding parameters to commands                 | ✅ Done        |
+| Getting a password.                           | ✅ Done        |
 | Getting list of the all passwords.            | ❌ In progress |
 | Edit password.                                | ❌ Not Started |
 | Delete password.                              | ❌ Not Started |
@@ -107,7 +107,7 @@ Here are the tasks and their statuses.
 
 ## 🔐 Security
 
-<!-- - All passwords are stored in an encrypted form using the AES algorithm. -->
+- All passwords are stored in an encrypted form using the AES algorithm.
 
 - Never store your master password in plain text! Use a secure method to store it if necessary.
 
