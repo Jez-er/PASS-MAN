@@ -101,6 +101,7 @@ Here are the tasks and their statuses.
 | Edit password.                                | ❌ Not Started |
 | Delete password.                              | ❌ Not Started |
 | Create help command.                          | ❌ Not Started |
+| Profile password hashing.                     | ❌ Not Started |
 
 ---
 
