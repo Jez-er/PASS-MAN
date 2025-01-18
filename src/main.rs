@@ -1,6 +1,7 @@
 use std::io::{self, BufRead, Write};
 
 mod handlers;
+mod utils;
 mod db;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {

@@ -94,7 +94,7 @@ Here are the tasks and their statuses.
 | Connect a local database.                     | ✅ Done        |
 | Authorization.                                | ✅ Done        |
 | Saving password.                              | ✅ Done        |
-| Password encryption.                          | ❌ Not Started |
+| Password encryption.                          | ✅ Done        |
 | Adding parameters to commands                 | ✅ Done        |
 | Getting a password.                           | ✅ Done        |
 | Getting list of the all passwords.            | ❌ In progress |
