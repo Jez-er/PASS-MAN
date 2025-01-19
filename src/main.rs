@@ -36,6 +36,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 };
 
                 let _ = db::orm::user::create("root", &hashed_password);
+                println!("PASS-MAN | Registration successful!");
                 is_auth = true;
                 handlers::handle_commands(&mut handle);
 

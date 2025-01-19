@@ -34,7 +34,7 @@ pub fn create(login: &str, password: &str) -> Result<(), rusqlite::Error> {
 pub fn get_all() -> Result<Vec<User>, rusqlite::Error> {
 	let conn = DB_CONNECTION.lock().expect("ERROR | Error getting connection");
     
-	let mut stmt = conn.prepare("SELECT id, login, password FROM users")?;
+	let mut stmt = conn.prepare("SELECT id, login, password, encode_key, encode_iv FROM users")?;
 	let users = stmt
 			.query_map([], |row| {
 					Ok(User {
