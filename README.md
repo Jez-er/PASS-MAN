@@ -108,7 +108,7 @@ Here are the tasks and their statuses.
 | Getting list of the all passwords.            | ✅ Done        |
 | Delete password.                              | ❌ Not Started |
 | Create help command.                          | ❌ In progress |
-| Profile password hashing.                     | ❌ In progress |
+| Profile password hashing.                     | ✅ Done        |
 
 ---
 
