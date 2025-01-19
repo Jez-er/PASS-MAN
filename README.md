@@ -52,36 +52,44 @@ To use **PASS MAN**, you need Python 3.x. To install and run the utility, follow
 1. **Simple Password** (Only letters and numbers):
 
    ```bash
-   gen_simple | gs
+   gen_simple --simple <length>
    ```
 
 2. **Complex Password** (Letters, numbers, and special symbols):
 
    ```bash
-   gen_pass | gp
+   gen_simple <length>
    ```
 
-<!-- ### Password Storage
+   _[Default password length is 12]_
+
+### Password Storage
 
 After generating a password, you can save it to the secure storage with the following command:
 
 ```bash
-passman save "service_name" "generated_password"
+save <service_name> <generated_password>
+```
+
+To view command by service_name:
+
+```bash
+get <service_name> [--show]
 ```
 
 To view all saved passwords:
 
 ```bash
-passman list
+list
 ```
 
-To delete a password:
+<!-- To delete a password:
 
 ```bash
 passman delete "service_name"
-```
+``` -->
 
---- -->
+---
 
 ## 💡 Tasks
 
@@ -98,7 +106,6 @@ Here are the tasks and their statuses.
 | Adding parameters to commands                 | ✅ Done        |
 | Getting a password.                           | ✅ Done        |
 | Getting list of the all passwords.            | ✅ Done        |
-| Edit password.                                | ❌ Not Started |
 | Delete password.                              | ❌ Not Started |
 | Create help command.                          | ❌ In progress |
 | Profile password hashing.                     | ❌ In progress |
