@@ -3,6 +3,12 @@ use rusqlite::OptionalExtension;
 use crate::db::main::DB_CONNECTION;
 use crate::utils::encoder;
 
+
+pub struct Password {
+    pub platform: String,
+    pub password: String
+}
+
 pub fn add(user_id: i64, user_iv: &[u8], user_key: &[u8], platform: &str, password: &str) -> Result<(), Box<dyn std::error::Error>> {
 	let conn = DB_CONNECTION.lock().expect("ERROR | Error getting connection");
 
@@ -34,3 +40,19 @@ pub fn get_by_platform(
     Ok(password)
 }
 
+pub fn get_all() -> Result<Vec<Password>, rusqlite::Error> {
+    let conn = DB_CONNECTION.lock().expect("ERROR | Error getting connection");
+        
+    let mut stmt = conn.prepare("SELECT platform, password FROM passwords")?;
+    let passwords = stmt
+        .query_map([], |row| {
+            Ok(Password {
+                platform: row.get(0)?,
+                password: row.get(1)?
+            })
+        })?
+        .filter_map(|password| password.ok()) // Ignore invalid lines
+        .collect();
+
+    Ok(passwords)
+}

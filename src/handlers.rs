@@ -84,6 +84,9 @@ pub fn handle_commands(handle: &mut dyn BufRead) {
                 println!("PASS-MAN | Usage: get <platform> [--verbose]");
             }
         }
+        "list" | "l" => {
+            commands::list::activate()
+        }
         "exit" | "q" => {
             commands::exit::activate();
         }

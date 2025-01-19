@@ -97,11 +97,11 @@ Here are the tasks and their statuses.
 | Password encryption.                          | ✅ Done        |
 | Adding parameters to commands                 | ✅ Done        |
 | Getting a password.                           | ✅ Done        |
-| Getting list of the all passwords.            | ❌ In progress |
+| Getting list of the all passwords.            | ✅ Done        |
 | Edit password.                                | ❌ Not Started |
 | Delete password.                              | ❌ Not Started |
-| Create help command.                          | ❌ Not Started |
-| Profile password hashing.                     | ❌ Not Started |
+| Create help command.                          | ❌ In progress |
+| Profile password hashing.                     | ❌ In progress |
 
 ---
 
